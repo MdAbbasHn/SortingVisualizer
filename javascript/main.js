@@ -1,4 +1,4 @@
-//jshint esversion:6
+//jshint esversion:8
 
 document.getElementById("genarray").addEventListener("click",()=>{
   generateArray();
@@ -20,7 +20,7 @@ function generateArray(){
     var node = document.createElement("div");
     node.classList.add("ev");
     var ran = Math.floor(Math.random()*500);
-    node.style.backgroundColor = "#E9B6EB";
+    node.style.backgroundColor = "purple";
     var size = ran;
     node.style.height = size+"px";
     sortarray.push(node);
@@ -41,15 +41,21 @@ function disableButtons(){
     butt[i].disabled = true;
   }
   ar_size.disabled = true;
-  ar_speed.disabled = true;
 }
 function enableButtons(){
   for(var i=0;i<butt.length;i++){
     butt[i].disabled = false;
   }
+
   ar_size.disabled = false;
   ar_speed.disabled = false;
 }
 function Sleep(ms) {
 	return new Promise(resolve => setTimeout(resolve, ms));
+}
+async function wait(){
+  await Sleep(5000);
+}
+function changeColor(a,col){
+  a.style.backgroundColor = col;
 }

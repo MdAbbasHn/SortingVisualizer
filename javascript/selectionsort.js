@@ -1,29 +1,36 @@
 //jshint esversion:8
 async function Selection(){
-  var arrspeed = parseInt(document.getElementById("arspeed").value);
-  console.log(arrspeed);
   disableButtons();
+  // Do selection sort
   for(var f=0;f<sortarray.length;f++){
-    sortarray[f].style.backgroundColor = "red";
+    //Check arrspeed at every iteration for user speed change
+    var arrspeed = parseInt(document.getElementById("arspeed").value);
+    //Change color of element being checked against others to red
+    changeColor(sortarray[f],"red");
+
     await Sleep(100/arrspeed);
+
     var min = f;
+    //Check other elements for the smallest one
     for(var j=f+1;j<sortarray.length;j++){
-      sortarray[j].style.backgroundColor = "purple";
+      arrspeed = parseInt(document.getElementById("arspeed").value);
+      changeColor(sortarray[j],"#E9B6EB");
       await Sleep(100/arrspeed);
-      sortarray[j].style.backgroundColor = "#E9B6EB";
+      changeColor(sortarray[j],"purple");
       if(heightarray[j]<heightarray[min]){
         min = j;
       }
     }
     await Sleep(100/arrspeed);
-    var tem = sortarray[min].style.height;
-    sortarray[min].style.backgroundColor = "yellow";
+    var tem = sortarray[min].style.height;//1
+    changeColor(sortarray[min],"yellow");
     await Sleep(300);
-    sortarray[min].style.backgroundColor = "#E9B6EB";
-    sortarray[min].style.height = sortarray[f].style.height;
+    changeColor(sortarray[min],"purple");
+    sortarray[min].style.height = sortarray[f].style.height;//2
     await Sleep(100/arrspeed);
-    sortarray[f].style.height = tem;
-    sortarray[f].style.backgroundColor = "#43FE01";
+    sortarray[f].style.height = tem;//3
+    changeColor(sortarray[f],"#43FE01");
+
     var temp = heightarray[min];
     heightarray[min]= heightarray[f];
     heightarray[f]= temp;

@@ -16,17 +16,17 @@
   </head>
   <body>
     <nav>
-      <h1>Sorting Visualizer</h1>
+      <h1>Sorting-Visualizer</h1>
     </nav>
     <section class="sec1">
       <div class="buttons">
         <h4>Array Size:</h4>
         <div class="slidecontainer">
-          <input id="arsize" type="range" min="6" max="100" value="50" class="slider" id="myRange">
+          <input id="arsize" type="range" min="10" max="90" value="50" class="slider" id="myRange">
         </div>
-        <button  id="bubble" onclick="Bubble()" class="btn-lg" type="button" name="button">Bubble Sort</button>
         <button  id="selection" onclick="Selection()" class="btn-lg " type="button" name="button">Selection Sort</button>
         <button  class="btn-lg" onclick="Insertion()" type="button" name="button">Insertion Sort</button>
+        <button  id="bubble" onclick="Bubble()" class="btn-lg" type="button" name="button">Bubble Sort</button>
         <button  class="btn-lg" onclick="Merge()" type="button" name="button">Merge Sort</button>
         <button  class="btn-lg" onclick="Heap()" type="button" name="button">Heap Sort</button>
         <h4>Speed:</h4>
@@ -38,14 +38,19 @@
       </div>
 
     </section>
-    <section class="visuals" id="visual">
+    <section>
+      <section class="visuals" id="visual">
 
+      </section>
     </section>
+
 
 
 
 
     <script src="javascript/main.js" charset="utf-8"></script>
     <script src="javascript/selectionsort.js" charset="utf-8"></script>
+    <script src="javascript/bubblesort.js" charset="utf-8"></script>
+    <script src="javascript/insertionsort.js" charset="utf-8"></script>
   </body>
 </html>
