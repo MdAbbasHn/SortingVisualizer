@@ -13,7 +13,7 @@ async function Insertion(){
         {
             changeColor(sortarray[j+1],"orange");
             changeColor(sortarray[j],"red");
-            await Sleep(500/arrspeed);
+            await Sleep(200/arrspeed);
             arrspeed = parseInt(document.getElementById("arspeed").value);
             sortarray[j + 1].style.height = sortarray[j].style.height;
             changeColor(sortarray[j],"#43FE01");
@@ -24,7 +24,7 @@ async function Insertion(){
         sortarray[j + 1].style.height = key+"px";
         changeColor(sortarray[j+1],"#43FE01");
         heightarray[j+1] = key;
-        await Sleep(200/arrspeed);
+        await Sleep(100/arrspeed);
     }
     enableButtons();
 }
