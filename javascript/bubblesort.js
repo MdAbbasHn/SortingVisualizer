@@ -1,12 +1,14 @@
 //jshint esversion:8
 async function Bubble(){
+  bubbleLegend();
+  refresh();
+  var swapped = false;
+  await Sleep(20);
   disableButtons();
   var n = sortarray.length;
         for (var i = 0; i < n-1; i++){
-          var arrspeed = parseInt(document.getElementById("arspeed").value);
-          await Sleep(100/arrspeed);
+          swapped = false;
           for (var j = 0; j < n-i-1; j++){
-            arrspeed = parseInt(document.getElementById("arspeed").value);
             changeColor(sortarray[j],"orange");
             changeColor(sortarray[j+1],"yellow");
             await Sleep(100/arrspeed);
@@ -21,12 +23,26 @@ async function Bubble(){
                 var tem = heightarray[j];
                 heightarray[j] = heightarray[j+1];
                 heightarray[j+1] = tem;
+                swapped = true;
             }
-            changeColor(sortarray[j],"purple");
+            changeColor(sortarray[j],"#0d1137");
           }
-          changeColor(sortarray[n-i-1],"#43FE01");
-          await Sleep(150/arrspeed);
+          changeColor(sortarray[n-i-1],"#e52165");
+          await Sleep(100/arrspeed);
+          if(swapped==false){
+            for(var g=n-i-1;g>=0;g--){
+              changeColor(sortarray[g],"#e52165");
+            }
+            break;
+          }
         }
-        changeColor(sortarray[0],"#43FE01");
+        changeColor(sortarray[0],"#e52165");
       enableButtons();
+}
+function bubbleLegend(){
+  leg.style.display = "flex";
+  $("#leftext").text(": Current Largest Element");
+  $("#rightext").text(": Current Element");
+  $("#current").hide();
+  $("#currtext").hide();
 }

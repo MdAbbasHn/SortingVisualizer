@@ -1,17 +1,24 @@
 //jshint esversion:8
-
-document.getElementById("genarray").addEventListener("click",()=>{
+var leg = document.getElementById("legend");
+var ar_speed = document.getElementById("arspeed");
+var arrspeed = document.getElementById("arspeed").value;
+arrspeed = arrspeed*arrspeed;
+var mainarrspeed = document.getElementById("arspeed");
+document.getElementById("arspeed").addEventListener("input",()=>{
+  arrspeed = mainarrspeed.value*mainarrspeed.value;
+});
+document.getElementById("arsize").addEventListener("input",()=>{
   generateArray();
 });
 var sortarray = [];
 var heightarray = [];
 var ar_size = document.getElementById("arsize");
-var ar_speed = document.getElementById("arspeed");
 var butt = document.querySelectorAll("button");
-console.log(butt.length);
+window.onload=update_array_size();
 function generateArray(){
   sortarray = [];
   heightarray = [];
+  leg.style.display = "none";
   var arrsize = parseInt(document.getElementById("arsize").value);
   while(document.getElementById("visual").hasChildNodes()){
     document.getElementById("visual").removeChild(document.getElementById("visual").childNodes[0]);
@@ -20,8 +27,9 @@ function generateArray(){
     var node = document.createElement("div");
     node.classList.add("ev");
     var ran = Math.floor(Math.random()*500);
-    node.style.backgroundColor = "purple";
-    var size = ran;
+    node.style.backgroundColor = "#0d1137";
+    node.style.width = (500/arrsize)+"px";
+    var size = ran+20;
     node.style.height = size+"px";
     sortarray.push(node);
     heightarray.push(size);
@@ -34,7 +42,6 @@ function update_array_size()
     generateArray();
 }
 
-window.onload=update_array_size();
 
 function disableButtons(){
   for(var i=0;i<butt.length;i++){
@@ -53,9 +60,11 @@ function enableButtons(){
 function Sleep(ms) {
 	return new Promise(resolve => setTimeout(resolve, ms));
 }
-async function wait(){
-  await Sleep(5000);
+function changeColor(g,col){
+  g.style.backgroundColor = col;
 }
-function changeColor(a,col){
-  a.style.backgroundColor = col;
+function refresh(){
+  for(var j=0;j<sortarray.length;j++){
+    sortarray[j].style.backgroundColor = "#0d1137";
+  }
 }

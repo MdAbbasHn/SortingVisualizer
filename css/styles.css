@@ -1,6 +1,6 @@
 body{
   margin:0;
-  background-color:maroon;
+  background-color:indigo;
 }
 nav{
   height:80px;
@@ -13,13 +13,20 @@ h1{
   color: violet;
   font-family: 'Sansita Swashed', cursive;
 }
+
+h5{
+  color: orange;
+  display: inline-block;
+  margin-right: 20px;
+}
 .sec1{
-  margin: auto;
+  margin: 0px auto 5px auto;
   padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: black;
+  background-color: indigo;
+
 }
 .slidecontainer{
   display: inline-block;
@@ -29,16 +36,55 @@ h4{
   color: white;
 
 }
+#genarray{
+  color: yellow;
+}
 .visuals{
   margin: auto;
   width:90%;
-  height:80vh;
+  height:70vh;
   display: flex;
   justify-content: center;
-  background-color: black;
+  background-color: #FAB4E2;
+
+}
+i{
+  margin-left: 2px;
+  cursor: pointer;
 }
 .ev{
   display: inline-block;
-  width: 15px;
-  margin:1px;
+  margin:1.5px;
+  /* border: 1px solid black; */
+  margin-top: 528px;
+  transform: rotateX(180deg);
+  transform-origin: top;
+  box-shadow: 3px 0px 4px;
+  border-radius: 0px 0px 3px 3px;
+}
+#unsorted,#sorted,#left,#right,#current{
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 3px 3px 3px 3px;
+}
+#unsorted{
+  background-color: #0d1137;
+}
+#sorted{
+  background-color: #e52165;
+}
+#legend{
+  display: none;
+  justify-content: center;
+  margin: 5px auto 5px auto;
+}
+#left{
+  background-color: orange;
+}
+#right{
+  background-color: yellow;
+}
+#current{
+  background-color: turquoise;
 }
