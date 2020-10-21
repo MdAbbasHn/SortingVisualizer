@@ -4,6 +4,7 @@ var ar_speed = document.getElementById("arspeed");
 var arrspeed = document.getElementById("arspeed").value;
 arrspeed = arrspeed*arrspeed;
 var mainarrspeed = document.getElementById("arspeed");
+var siz = 2;
 document.getElementById("arspeed").addEventListener("input",()=>{
   arrspeed = mainarrspeed.value*mainarrspeed.value;
 });
@@ -23,14 +24,29 @@ function generateArray(){
   while(document.getElementById("visual").hasChildNodes()){
     document.getElementById("visual").removeChild(document.getElementById("visual").childNodes[0]);
   }
-  for(var i=0;i<arrsize*2;i++){
+  var w = window.innerWidth|| document.documentElement.clientWidth || document.body.clientWidth;
+  if(w<550){
+    siz = 0.5;
+    console.log(w);
+  }
+  else{
+    siz = 1.5;
+    console.log(w);
+  }
+  console.log(siz);
+  for(var i=0;i<arrsize*siz;i++){
     var node = document.createElement("div");
     node.classList.add("ev");
-    var ran = Math.floor(Math.random()*500);
+    var ran = Math.floor(Math.random()*89)+1;
     node.style.backgroundColor = "#0d1137";
-    node.style.width = (500/arrsize)+"px";
-    var size = ran+20;
-    node.style.height = size+"px";
+    if(w<550){
+      node.style.width = "50px";
+    }
+    else{
+      node.style.width = (600/arrsize)+"px";
+    }
+    var size = ran;
+    node.style.height = size+"%";
     sortarray.push(node);
     heightarray.push(size);
     document.getElementById("visual").appendChild(node);

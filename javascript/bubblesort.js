@@ -41,8 +41,8 @@ async function Bubble(){
 }
 function bubbleLegend(){
   leg.style.display = "flex";
-  $("#leftext").text(": Current Largest Element");
-  $("#rightext").text(": Current Element");
+  $("#leftext").text("-> Current Largest Element");
+  $("#rightext").text("-> Current Element");
   $("#current").hide();
   $("#currtext").hide();
 }

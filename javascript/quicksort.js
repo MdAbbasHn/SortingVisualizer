@@ -46,8 +46,8 @@ async function partition(l,h){
       await Sleep(100/arrspeed);
     //  changeColor(sortarray[i],"green");
       //changeColor(sortarray[j],"black");
-      sortarray[i].style.height = heightarray[j]+"px";
-      sortarray[j].style.height = heightarray[i]+"px";
+      sortarray[i].style.height = heightarray[j]+"%";
+      sortarray[j].style.height = heightarray[i]+"%";
       var temp = heightarray[i];
       heightarray[i] = heightarray[j];
       heightarray[j] = temp;
@@ -58,8 +58,8 @@ async function partition(l,h){
     }
     changeColor(sortarray[j],"#0d1137");
   }
-  sortarray[l].style.height = heightarray[j]+"px";
-  sortarray[j].style.height = heightarray[l]+"px";
+  sortarray[l].style.height = heightarray[j]+"%";
+  sortarray[j].style.height = heightarray[l]+"%";
   changeColor(sortarray[l],"#0d1137");
   changeColor(sortarray[j],"#e52165");
   await Sleep(300/arrspeed);
@@ -70,7 +70,7 @@ async function partition(l,h){
 }
 function quickLegend(){
   leg.style.display = "flex";
-  $("#leftext").text(": Larger than Pivot from Left");
-  $("#rightext").text(": Smaller than Pivot from Right");
-  $("#currtext").text(": Pivot Element");
+  $("#leftext").text("-> Larger than Pivot from Left");
+  $("#rightext").text("-> Smaller than Pivot from Right");
+  $("#currtext").text("-> Pivot Element");
 }

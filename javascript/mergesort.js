@@ -36,7 +36,7 @@ async function merge(l,mid,r){
     if (Ah[i] <= Bh[j])
          {
              heightarray[k] = Ah[i];
-             sortarray[k].style.height = Ah[i]+"px";
+             sortarray[k].style.height = Ah[i]+"%";
              changeColor(sortarray[k],"#e52165");
              await Sleep(100/arrspeed);
              i++;
@@ -44,7 +44,7 @@ async function merge(l,mid,r){
          else
          {
              heightarray[k] = Bh[j];
-             sortarray[k].style.height = Bh[j]+"px";
+             sortarray[k].style.height = Bh[j]+"%";
              changeColor(sortarray[k],"#e52165");
              await Sleep(100/arrspeed);
              j++;
@@ -54,7 +54,7 @@ async function merge(l,mid,r){
    while (i < n1)
    {
      heightarray[k] = Ah[i];
-     sortarray[k].style.height = Ah[i]+"px";
+     sortarray[k].style.height = Ah[i]+"%";
      changeColor(sortarray[k],"orange");
      await Sleep(100/arrspeed);
        i++;
@@ -64,7 +64,7 @@ async function merge(l,mid,r){
    while (j < n2)
    {
      heightarray[k] = Bh[j];
-     sortarray[k].style.height = Bh[j]+"px";
+     sortarray[k].style.height = Bh[j]+"%";
      changeColor(sortarray[k],"turquoise");
      await Sleep(100/arrspeed);
        j++;
@@ -77,7 +77,7 @@ async function merge(l,mid,r){
 }
 function mergeLegend(){
 leg.style.display = "flex";
-$("#leftext").text(": Remaining Left Sub-Array Elements");
-$("#rightext").text(": Middle Element of Sub-Array");
-$("#currtext").text(": Remaining Right Sub-Array Elements");
+$("#leftext").text("-> Remaining Left Sub-Array Elements");
+$("#rightext").text("-> Middle Element of Sub-Array");
+$("#currtext").text("-> Remaining Right Sub-Array Elements");
 }

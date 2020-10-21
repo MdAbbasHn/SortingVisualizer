@@ -21,7 +21,7 @@ async function Insertion(){
             heightarray[j + 1] = heightarray[j];
             j = j - 1;
         }
-        sortarray[j + 1].style.height = key+"px";
+        sortarray[j + 1].style.height = key+"%";
         changeColor(sortarray[j+1],"#e52165");
         heightarray[j+1] = key;
         await Sleep(100/arrspeed);
@@ -30,8 +30,8 @@ async function Insertion(){
 }
 function insertionLegend(){
   leg.style.display = "flex";
-  $("#leftext").text(": Left Element");
-  $("#rightext").text(": Right Element");
+  $("#leftext").text("-> Left Element");
+  $("#rightext").text("-> Right Element");
   $("#current").hide();
   $("#currtext").hide();
 }

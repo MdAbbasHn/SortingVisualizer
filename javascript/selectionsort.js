@@ -40,8 +40,8 @@ async function Selection(){
 }
 function selectionLegend(){
   leg.style.display = "flex";
-  $("#leftext").text(": Current element");
-  $("#rightext").text(": Smallest element in Unsorted Array");
+  $("#leftext").text("-> Current element");
+  $("#rightext").text("-> Smallest element in Unsorted Array");
   $("#current").hide();
   $("#currtext").hide();
 }
