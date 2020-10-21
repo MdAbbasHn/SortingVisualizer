@@ -30,8 +30,8 @@ async function Insertion(){
 }
 function insertionLegend(){
   leg.style.display = "flex";
-  $("#leftext").text("-> Left Element");
-  $("#rightext").text("-> Right Element");
+  $("#leftext").text("Left Element");
+  $("#rightext").text("Right Element");
   $("#current").hide();
   $("#currtext").hide();
 }

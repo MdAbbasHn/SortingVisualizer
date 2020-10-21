@@ -77,7 +77,7 @@ async function merge(l,mid,r){
 }
 function mergeLegend(){
 leg.style.display = "flex";
-$("#leftext").text("-> Remaining Left Sub-Array Elements");
-$("#rightext").text("-> Middle Element of Sub-Array");
-$("#currtext").text("-> Remaining Right Sub-Array Elements");
+$("#leftext").text("Remaining Left Sub Elements");
+$("#rightext").text("Middle Element of Sub-Array");
+$("#currtext").text("Remaining Right Sub Elements");
 }

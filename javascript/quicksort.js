@@ -70,7 +70,7 @@ async function partition(l,h){
 }
 function quickLegend(){
   leg.style.display = "flex";
-  $("#leftext").text("-> Larger than Pivot from Left");
-  $("#rightext").text("-> Smaller than Pivot from Right");
-  $("#currtext").text("-> Pivot Element");
+  $("#leftext").text("Larger than Pivot from Left");
+  $("#rightext").text("Smaller than Pivot from Right");
+  $("#currtext").text("Pivot Element");
 }
