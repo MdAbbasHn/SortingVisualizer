@@ -15,9 +15,10 @@ h1{
 }
 
 h5{
-  color: orange;
+  color: black;
   display: inline-block;
-  margin-right: 20px;
+  font-size: 0.9rem;
+  width: 100%;
 }
 .sec1{
   margin: 0px auto 5px auto;
@@ -36,12 +37,15 @@ h4{
   color: white;
 
 }
+#untext{
+  color: white;
+}
 #genarray{
   color: yellow;
 }
 .visuals{
   margin: auto;
-  height:75vh;
+  height:70vh;
   width: 90%;
   display: flex;
   justify-content: center;
@@ -58,8 +62,8 @@ h4{
 }
 .ev{
   display: inline-block;
-  margin:1.5px;
-   border: 1px solid black;
+  margin: 0 1px;
+  border: 1px solid black;
   transform: rotateX(180deg);
   transform-origin: top;
   box-shadow: 3px 0px 4px;
@@ -67,10 +71,12 @@ h4{
 
 }
 #unsorted,#sorted,#left,#right,#current{
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
+  width: 60%;
+  height: 43px;
+  margin: 5px 10px;
   border-radius: 3px 3px 3px 3px;
+  display: inline-block;
+  text-align: center;
 }
 #unsorted{
   background-color: #0d1137;
@@ -79,8 +85,10 @@ h4{
   background-color: #e52165;
 }
 #legend{
-  display: none;
+  width: 90%;
+  display: ;
   justify-content: center;
+  align-items: center;
   margin: 5px auto 5px auto;
 }
 
@@ -127,7 +135,7 @@ footer{
     display: block;
   }
   h5{
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
   #legend{
   }

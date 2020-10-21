@@ -25,7 +25,7 @@ function generateArray(){
     document.getElementById("visual").removeChild(document.getElementById("visual").childNodes[0]);
   }
   var w = window.innerWidth|| document.documentElement.clientWidth || document.body.clientWidth;
-  if(w<550){
+  if(w<750){
     siz = 0.5;
     console.log(w);
   }
@@ -39,7 +39,7 @@ function generateArray(){
     node.classList.add("ev");
     var ran = Math.floor(Math.random()*89)+1;
     node.style.backgroundColor = "#0d1137";
-    if(w<550){
+    if(w<750){
       node.style.width = "50px";
     }
     else{
