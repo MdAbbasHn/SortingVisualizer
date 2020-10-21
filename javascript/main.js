@@ -30,7 +30,7 @@ function generateArray(){
     console.log(w);
   }
   else{
-    siz = 1.5;
+    siz = 1.7;
     console.log(w);
   }
   console.log(siz);
