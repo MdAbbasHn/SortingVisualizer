@@ -12,8 +12,8 @@ async function Insertion(){
         var j = i - 1;
         while (j >= 0 && heightarray[j] > key)
         {
-            changeColor(sortarray[j+1],"orange");
-            changeColor(sortarray[j],"yellow");
+            changeColor(sortarray[j+1],"yellow");
+            changeColor(sortarray[j],"orange");
             await Sleep(200/arrspeed);
             sortarray[j + 1].style.height = sortarray[j].style.height;
             changeColor(sortarray[j],"#e52165");
