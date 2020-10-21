@@ -34,4 +34,5 @@ function insertionLegend(){
   $("#rightext").text("Right Element");
   $("#current").hide();
   $("#currtext").hide();
+
 }
