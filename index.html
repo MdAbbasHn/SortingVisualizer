@@ -11,7 +11,6 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <title>Sorting Visualizer</title>
   </head>
@@ -25,11 +24,11 @@
         <div class="slidecontainer">
           <input id="arsize" type="range" min="4" max="90" value="50" class="slider" id="myRange">
         </div>
-        <button  id="selection" onclick="Selection()" class="btn btn-light" type="button" name="button">Selection Sort<i class="fa fa-info-circle"></i></button>
-        <button  class="btn btn-light" onclick="Insertion()" type="button" name="button">Insertion Sort<i class="fa fa-info-circle"></i></button>
+        <button  id="selection" onclick="Selection()" class="btn btn-light" type="button" name="button">Selection Sort</button>
+        <button  class="btn btn-light" onclick="Insertion()" type="button" name="button">Insertion Sort</button>
         <button  id="bubble" onclick="Bubble()" class="btn btn-light" type="button" name="button">Bubble Sort<i class="fa fa-info-circle"></i></button>
-        <button  class="btn btn-light" onclick="Merge()" type="button" name="button">Merge Sort<i class="fa fa-info-circle"></i></button>
-        <button  class="btn btn-light" onclick="Quick()" type="button" name="button">Quick Sort<i class="fa fa-info-circle"></i></button>
+        <button  class="btn btn-light" onclick="Merge()" type="button" name="button">Merge Sort</button>
+        <button  class="btn btn-light" onclick="Quick()" type="button" name="button">Quick Sort</button>
         <h4>Speed:</h4>
         <div class="slidecontainer">
           <input id="arspeed" type="range" min="1" max="5" value="3" class="slider" id="myRange">
@@ -56,16 +55,9 @@
       </div>
       <h5 id="midtext">: Middle Element of Sub-Array</h5> -->
     </div>
-    <section>
       <section class="visuals" id="visual">
 
       </section>
-    </section>
-
-
-
-
-
     <script src="javascript/main.js" charset="utf-8"></script>
     <script src="javascript/selectionsort.js" charset="utf-8"></script>
     <script src="javascript/bubblesort.js" charset="utf-8"></script>
@@ -73,4 +65,7 @@
     <script src="javascript/mergesort.js" charset="utf-8"></script>
     <script src="javascript/quicksort.js" charset="utf-8"></script>
   </body>
+  <footer>
+  Copyright © 2020 Mohammed Abbas Hussain
+  </footer>
 </html>
